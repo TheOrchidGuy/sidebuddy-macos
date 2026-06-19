@@ -4,7 +4,10 @@
   "description": "A tiny local snippet and command vault for macOS built with Electron.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "electron .",
+    "pack:mac": "electron-builder --mac dir",
+    "dist:mac": "electron-builder --mac zip"
   },
   "keywords": [
     "electron",
@@ -12,10 +15,34 @@
     "snippets",
     "clipboard"
   ],
-  "author": "",
+  "author": "Chris Dotson",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "electron": "^42.4.0"
+    "electron": "^42.4.0",
+    "electron-builder": "^26.15.3"
+  },
+  "productName": "Side Buddy",
+  "build": {
+    "appId": "com.dotson.sidebuddy",
+    "productName": "Side Buddy",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "styles.css",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dir",
+        "zip"
+      ]
+    }
   }
 }
