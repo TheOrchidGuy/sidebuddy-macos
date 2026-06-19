@@ -1,0 +1,21 @@
+{
+  "name": "side-buddy-mac",
+  "version": "0.3.0",
+  "description": "A tiny local snippet and command vault for macOS built with Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "notes",
+    "snippets",
+    "clipboard"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^42.4.0"
+  }
+}
