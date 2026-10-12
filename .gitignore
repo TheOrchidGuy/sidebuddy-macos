@@ -6,6 +6,7 @@ dist/
 build/
 out/
 release/
+*.zip
 
 # Cache / logs / local files
 .cache/

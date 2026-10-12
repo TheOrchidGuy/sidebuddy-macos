@@ -1,6 +1,7 @@
-# Side Buddy Mac v0.3
+# Side Buddy for macOS
 
-A tiny local Electron app for saving snippets, terminal commands, setup notes, and copy/paste reminders.
+A work-in-progress local Electron app for saving snippets, terminal commands,
+setup notes, and copy/paste reminders. The current application version is 0.3.0.
 
 ## What it does
 
@@ -14,10 +15,11 @@ A tiny local Electron app for saving snippets, terminal commands, setup notes, a
 
 ## How to run it
 
-Open Terminal and run:
+Clone the repository, install the dependencies, and start the app:
 
 ```bash
-cd ~/Desktop/side-buddy-mac-v0.3
+git clone https://github.com/TheOrchidGuy/sidebuddy-macos.git
+cd sidebuddy-macos
 npm install
 npm start
 ```
@@ -26,5 +28,11 @@ If you already have Node and npm installed, this should launch the app.
 
 ## Notes
 
-This zip does not include `node_modules` because that folder is large and machine-generated.
-Run `npm install` once after unzipping.
+Project archives, packaged applications, build output, and `node_modules` are not
+stored in Git. Run `npm install` after cloning the repository.
+
+## Project status
+
+Side Buddy is under active design and development. The current repository is a
+working baseline; interface and interaction refinements will be recorded as
+subsequent commits.
