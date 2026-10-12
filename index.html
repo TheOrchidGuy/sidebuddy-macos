@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Side Buddy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Side Buddy v0.3</p>
+        <h1>Snippet vault for your Mac</h1>
+        <p class="subhead">Save commands, notes, setup steps, and tiny “do not lose this” brain scraps.</p>
+      </div>
+      <button id="clearFormButton" class="secondary-button">New note</button>
+    </section>
+
+    <section class="layout">
+      <aside class="panel form-panel">
+        <h2>Add / edit note</h2>
+
+        <label>
+          Title
+          <input id="titleInput" placeholder="Example: Proton VPN setup command" />
+        </label>
+
+        <label>
+          Category
+          <select id="categoryInput">
+            <option>Terminal</option>
+            <option>Mac Setup</option>
+            <option>Proton</option>
+            <option>Cybersecurity</option>
+            <option>Divorce Docs</option>
+            <option>Orchids</option>
+            <option>Random Brain Dump</option>
+            <option>General</option>
+          </select>
+        </label>
+
+        <label>
+          Note / command
+          <textarea id="bodyInput" placeholder="Paste commands, notes, or steps here..."></textarea>
+        </label>
+
+        <button id="saveButton" class="primary-button">Save note</button>
+        <p id="statusMessage" class="status"></p>
+      </aside>
+
+      <section class="panel notes-panel">
+        <div class="notes-toolbar">
+          <h2>Saved notes</h2>
+          <input id="searchInput" placeholder="Search notes..." />
+        </div>
+
+        <div id="notesList" class="notes-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
